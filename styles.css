@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+    --light-grey:#F4F4F5;
+    --dark-grey:#8D8E8E;
+    --purple:#5E2BFF;
+    --white:#ffffff;
+}
+
+body{
+    background-color: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 15px auto;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.input-container{
+    position: relative;
+    font-size: 20px;
+}
+
+.input-container input{
+    all: unset;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--dark-grey);
+}
+
+.input-container label{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    color: var(--dark-grey);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-container >
+input:is(:focus, :valid) ~ label{
+    bottom: 100%;
+    font-size: 16px;
+    color: var(--purple);
+}
+
+.input-container > .underline{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--purple);
+    scale: 0 1;
+    transition: 0.3s;
+}
+
+.input-container > input:focus ~.underline{
+    scale: 1 1;
+}
+
+h1{}
+
+.convert-btn{
+    background-color: var(--purple);
+    color: var(--white);
+    border-style: none;
+    margin: 15px auto;
+    padding: 5px;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 15px;
+}

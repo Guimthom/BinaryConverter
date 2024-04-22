@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Decimal to Binary Converter</h1>
+    <h1>Convertisseur binaire</h1>
+    <div class="container">
     <div class="input-container">
-      <label for="number-input">Enter a decimal number:</label>
       <input
         value=""
         type="number"
         name="decimal number input"
         id="number-input"
         class="number-input"
+        required
+        autocomplete="off"
       />
-      <button class="convert-btn" id="convert-btn">Convert</button>
+      <label for="number-input">Entrer un nombre</label>
+      <div class="underline"></div>
+    </div>
+    <button class="convert-btn" id="convert-btn">Convertir</button>
     </div>
     <output id="result" for="number-input"></output>
     <div id="animation-container"></div>

@@ -74,15 +74,22 @@ input:is(:focus, :valid) ~ label{
     scale: 1 1;
 }
 
-h1{}
+h1{
+    margin-top: 20px;
+}
 
 .convert-btn{
     background-color: var(--purple);
     color: var(--white);
     border-style: none;
-    margin: 15px auto;
-    padding: 5px;
-    width: 80px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 150px;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+output{
+    font-size: 20px;
 }
